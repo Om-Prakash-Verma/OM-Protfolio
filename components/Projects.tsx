@@ -9,28 +9,32 @@ const projects: Project[] = [
     title: "CrockeryHub",
     description: "A specialized digital storefront and admin system for premium crockery, featuring dynamic content management.",
     features: ["Admin CMS with Analytics", "WhatsApp Checkout Flow", "Dynamic Site Configuration"],
-    techStack: ["Next.js", "Firebase", "ShadCN UI", "Genkit"]
+    techStack: ["Next.js", "Firebase", "ShadCN UI", "Genkit"],
+    demoUrl: "https://www.shreeenterprises.info/"
   },
   {
     id: "2",
     title: "Flix",
     description: "Feature-rich discovery platform leveraging TMDB and AI for seamless content streaming.",
     features: ["AI-Powered Stream Fallback", "Advanced Filtering Engine", "Multi-Source Video Player"],
-    techStack: ["Next.js", "TMDB API", "Genkit", "Tailwind"]
+    techStack: ["Next.js", "TMDB API", "Genkit", "Tailwind"],
+    demoUrl: "https://flixwatch.pro/"
   },
   {
     id: "3",
     title: "Campus Pulse",
     description: "Centralized campus ecosystem for event discovery and club management with simulated backend logic.",
     features: ["Interactive Calendar System", "Financial Budget Tracking", "Client-Side Persistence"],
-    techStack: ["Next.js", "TypeScript", "ShadCN UI", "LocalStorage"]
+    techStack: ["Next.js", "TypeScript", "ShadCN UI", "LocalStorage"],
+    demoUrl: "https://campus-pulse-beta.vercel.app/"
   },
   {
     id: "4",
     title: "AetherSchedule",
     description: "Enterprise-grade academic operations platform solving NP-Hard scheduling problems using Neuro-Symbolic AI.",
     features: ["Neuro-Symbolic Engine", "3D Conflict Detection Matrix", "Operational Analytics Digital Twin"],
-    techStack: ["Gemini 3.0 Pro", "React", "Firebase", "Algorithms"]
+    techStack: ["Gemini 3.0 Pro", "React", "Firebase", "Algorithms"],
+    demoUrl: "https://aether-schedule.vercel.app/"
   }
 ];
 
