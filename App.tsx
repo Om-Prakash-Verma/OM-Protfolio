@@ -12,6 +12,7 @@ import { CrockeryHub } from './components/projects/CrockeryHub';
 import { Flix } from './components/projects/Flix';
 import { CampusPulse } from './components/projects/CampusPulse';
 import { AetherSchedule } from './components/projects/AetherSchedule';
+import { SEO } from './components/SEO';
 
 // Define the valid view types as a union string type
 type ViewState = 'home' | 'resume' | 'project-1' | 'project-2' | 'project-3' | 'project-4'; 
@@ -77,6 +78,11 @@ function App() {
       default:
         return (
           <>
+            <SEO 
+              title="Om Prakash Verma | System-First Thinker"
+              description="Premium personal portfolio for Om Prakash Verma, an AI-Assisted Web App Builder and System-First Thinker specializing in React, Next.js, and System Architecture."
+              keywords={['Portfolio', 'System Design', 'React Developer', 'AI Engineer', 'Web Architecture']}
+            />
             <Hero onNavigate={(id) => handleNavigate('home', id)} />
             <About />
             <Skills />

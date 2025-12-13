@@ -1,0 +1,42 @@
+import React, { useEffect } from 'react';
+
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+}
+
+export const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
+  useEffect(() => {
+    // Update Document Title
+    document.title = title;
+
+    // Helper function to find or create a meta tag and update its content
+    const updateMeta = (name: string, content: string, attribute: string = 'name') => {
+      let element = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute(attribute, name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    // Update standard meta tags
+    updateMeta('description', description);
+    if (keywords && keywords.length > 0) {
+      updateMeta('keywords', keywords.join(', '));
+    }
+
+    // Update Open Graph tags
+    updateMeta('og:title', title, 'property');
+    updateMeta('og:description', description, 'property');
+
+    // Update Twitter tags
+    updateMeta('twitter:title', title, 'property');
+    updateMeta('twitter:description', description, 'property');
+
+  }, [title, description, keywords]);
+
+  return null;
+};

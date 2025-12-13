@@ -1,9 +1,15 @@
 import React from 'react';
 import { FadeIn } from './ui/FadeIn';
+import { SEO } from './SEO';
 
 export const Resume: React.FC = () => {
   return (
     <section id="resume" className="py-24 bg-neutral-900 relative">
+      <SEO 
+        title="Resume | Om Prakash Verma"
+        description="Professional resume of Om Prakash Verma. Computer Science Engineering student skilled in System Design, AI-Assisted Development, and Full Stack Architecture."
+        keywords={['Resume', 'CV', 'Computer Science', 'Software Engineer', 'System Architect']}
+      />
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn className="mb-12 flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-8 gap-4">
            <div>

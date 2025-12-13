@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FadeIn } from '../ui/FadeIn';
+import { SEO } from '../SEO';
 
 interface AetherScheduleProps {
   onBack: () => void;
@@ -12,6 +13,11 @@ export const AetherSchedule: React.FC<AetherScheduleProps> = ({ onBack }) => {
 
   return (
     <section className="min-h-screen bg-neutral-900 pt-20 pb-16 md:pt-24 md:pb-20 relative">
+      <SEO 
+        title="AetherSchedule - Project Case Study | Om Prakash Verma"
+        description="Enterprise-grade academic operations platform solving NP-Hard scheduling problems using Neuro-Symbolic AI and Gemini 3.0 Pro."
+        keywords={['Artificial Intelligence', 'Neuro-Symbolic AI', 'Gemini 3.0 Pro', 'System Design', 'Algorithms']}
+      />
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Navigation */}

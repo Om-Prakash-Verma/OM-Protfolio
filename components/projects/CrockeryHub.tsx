@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FadeIn } from '../ui/FadeIn';
+import { SEO } from '../SEO';
 
 interface CrockeryHubProps {
   onBack: () => void;
@@ -12,6 +13,11 @@ export const CrockeryHub: React.FC<CrockeryHubProps> = ({ onBack }) => {
 
   return (
     <section className="min-h-screen bg-neutral-900 pt-20 pb-16 md:pt-24 md:pb-20 relative">
+      <SEO 
+        title="CrockeryHub - Project Case Study | Om Prakash Verma"
+        description="A specialized digital storefront and admin system for premium crockery, featuring dynamic content management and WhatsApp checkout flow."
+        keywords={['E-commerce', 'Next.js', 'Firebase', 'CMS', 'Web Development']}
+      />
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Navigation */}

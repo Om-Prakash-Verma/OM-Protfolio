@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FadeIn } from '../ui/FadeIn';
+import { SEO } from '../SEO';
 
 interface FlixProps {
   onBack: () => void;
@@ -12,6 +13,11 @@ export const Flix: React.FC<FlixProps> = ({ onBack }) => {
 
   return (
     <section className="min-h-screen bg-neutral-900 pt-20 pb-16 md:pt-24 md:pb-20 relative">
+      <SEO 
+        title="Flix - Project Case Study | Om Prakash Verma"
+        description="Feature-rich discovery platform leveraging TMDB and AI for seamless content streaming. Includes AI-powered stream fallback."
+        keywords={['Next.js', 'TMDB', 'Streaming', 'AI', 'Frontend Architecture']}
+      />
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Navigation */}
