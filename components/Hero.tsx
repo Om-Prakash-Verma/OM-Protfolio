@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
               <span className="text-xs font-medium text-neutral-300">
-                Building: <span className="text-white">Distributed Chat App</span>
+                Building: <span className="text-white">LinkWave - Open Resource Index 🌊</span>
               </span>
            </div>
          </FadeIn>
