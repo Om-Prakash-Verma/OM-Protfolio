@@ -17,6 +17,7 @@ export const CampusPulse: React.FC<CampusPulseProps> = ({ onBack }) => {
         title="Campus Pulse - Project Case Study | Om Prakash Verma"
         description="Centralized campus ecosystem for event discovery and club management using React and client-side persistence for immediate user feedback."
         keywords={['Campus Management', 'React', 'LocalStorage', 'Frontend Architecture']}
+        type="article"
       />
       <div className="max-w-7xl mx-auto px-6">
         

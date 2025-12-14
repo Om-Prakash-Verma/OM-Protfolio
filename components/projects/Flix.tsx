@@ -17,6 +17,7 @@ export const Flix: React.FC<FlixProps> = ({ onBack }) => {
         title="Flix - Project Case Study | Om Prakash Verma"
         description="Feature-rich discovery platform leveraging TMDB and AI for seamless content streaming. Includes AI-powered stream fallback."
         keywords={['Next.js', 'TMDB', 'Streaming', 'AI', 'Frontend Architecture']}
+        type="article"
       />
       <div className="max-w-7xl mx-auto px-6">
         

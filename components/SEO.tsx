@@ -6,6 +6,8 @@ interface SEOProps {
   keywords?: string[];
   canonicalUrl?: string;
   robots?: string;
+  image?: string;
+  type?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({ 
@@ -13,7 +15,9 @@ export const SEO: React.FC<SEOProps> = ({
   description, 
   keywords, 
   canonicalUrl,
-  robots = 'index, follow' 
+  robots = 'index, follow',
+  image,
+  type = 'website'
 }) => {
   useEffect(() => {
     // Update Document Title
@@ -30,27 +34,19 @@ export const SEO: React.FC<SEOProps> = ({
       element.setAttribute('content', content);
     };
 
-    // Update standard meta tags
+    // Standard Meta Tags
     updateMeta('description', description);
     updateMeta('robots', robots);
+    updateMeta('googlebot', robots); // Explicit Googlebot tag
     
     if (keywords && keywords.length > 0) {
       updateMeta('keywords', keywords.join(', '));
     }
 
-    // Determine the effective URL (Canonical > Current Href without hash)
-    const effectiveUrl = canonicalUrl || window.location.href.split('#')[0];
+    // Determine the effective URL (Canonical > Current Href without hash/query)
+    const effectiveUrl = canonicalUrl || window.location.href.split('#')[0].split('?')[0];
 
-    // Update Open Graph tags
-    updateMeta('og:title', title, 'property');
-    updateMeta('og:description', description, 'property');
-    updateMeta('og:url', effectiveUrl, 'property');
-
-    // Update Twitter tags
-    updateMeta('twitter:title', title, 'property');
-    updateMeta('twitter:description', description, 'property');
-
-    // Update Canonical Link
+    // Canonical Link
     let link = document.querySelector("link[rel='canonical']");
     if (!link) {
       link = document.createElement('link');
@@ -59,7 +55,24 @@ export const SEO: React.FC<SEOProps> = ({
     }
     link.setAttribute('href', effectiveUrl);
 
-  }, [title, description, keywords, canonicalUrl, robots]);
+    // Open Graph
+    updateMeta('og:type', type, 'property');
+    updateMeta('og:title', title, 'property');
+    updateMeta('og:description', description, 'property');
+    updateMeta('og:url', effectiveUrl, 'property');
+    if (image) {
+      updateMeta('og:image', image, 'property');
+    }
+
+    // Twitter
+    updateMeta('twitter:card', image ? 'summary_large_image' : 'summary', 'name');
+    updateMeta('twitter:title', title, 'name');
+    updateMeta('twitter:description', description, 'name');
+    if (image) {
+      updateMeta('twitter:image', image, 'name');
+    }
+
+  }, [title, description, keywords, canonicalUrl, robots, image, type]);
 
   return null;
 };

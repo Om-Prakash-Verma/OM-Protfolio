@@ -17,6 +17,7 @@ export const CrockeryHub: React.FC<CrockeryHubProps> = ({ onBack }) => {
         title="CrockeryHub - Project Case Study | Om Prakash Verma"
         description="A specialized digital storefront and admin system for premium crockery, featuring dynamic content management and WhatsApp checkout flow."
         keywords={['E-commerce', 'Next.js', 'Firebase', 'CMS', 'Web Development']}
+        type="article"
       />
       <div className="max-w-7xl mx-auto px-6">
         

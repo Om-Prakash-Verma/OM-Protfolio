@@ -9,6 +9,7 @@ export const Resume: React.FC = () => {
         title="Resume | Om Prakash Verma"
         description="Professional resume of Om Prakash Verma. Computer Science Engineering student skilled in System Design, AI-Assisted Development, and Full Stack Architecture."
         keywords={['Resume', 'CV', 'Computer Science', 'Software Engineer', 'System Architect']}
+        type="profile"
       />
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn className="mb-12 flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-8 gap-4">
