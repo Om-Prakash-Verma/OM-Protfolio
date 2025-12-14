@@ -43,27 +43,30 @@ Built with a focus on clean architecture and performance, even within a client-s
 /
 ├── components/
 │   ├── ui/
-│   │   └── FadeIn.tsx       # Core animation wrapper using IntersectionObserver
-│   ├── projects/            # Detailed case study views
+│   │   ├── FadeIn.tsx             # Core animation wrapper using IntersectionObserver
+│   │   ├── NetworkBackground.tsx  # Interactive particle background
+│   │   ├── ArchitectureDiagram.tsx # Visualization for CrockeryHub architecture
+│   │   └── NeuroSymbolicDiagram.tsx # Visualization for AetherSchedule AI flow
+│   ├── projects/                  # Detailed case study views
 │   │   ├── CrockeryHub.tsx
 │   │   ├── Flix.tsx
 │   │   ├── CampusPulse.tsx
 │   │   └── AetherSchedule.tsx
-│   ├── Navbar.tsx           # Responsive navigation with glassmorphism
-│   ├── Hero.tsx             # Cinematic landing area
-│   ├── About.tsx            # Personal introduction
-│   ├── Skills.tsx           # "Approach" section (System Design > Syntax)
-│   ├── Projects.tsx         # Grid view of project cards
-│   ├── Philosophy.tsx       # Core values section
-│   ├── Resume.tsx           # Printable/Web-viewable CV
-│   ├── Contact.tsx          # CTA and Social Links
+│   ├── Navbar.tsx                 # Responsive navigation with glassmorphism
+│   ├── Hero.tsx                   # Cinematic landing area
+│   ├── About.tsx                  # Personal introduction
+│   ├── Skills.tsx                 # "Approach" section (System Design > Syntax)
+│   ├── Projects.tsx               # Grid view of project cards
+│   ├── Philosophy.tsx             # Core values section
+│   ├── Resume.tsx                 # Printable/Web-viewable CV
+│   ├── Contact.tsx                # CTA and Social Links
 │   └── Footer.tsx
 ├── hooks/
-│   └── useOnScreen.ts       # Hook for scroll-triggered animations
-├── types.ts                 # TS Interfaces for consistency
-├── App.tsx                  # Main Layout & View Router
-├── index.html               # Entry point, Tailwind config, Fonts
-└── index.tsx                # React Root
+│   └── useOnScreen.ts             # Hook for scroll-triggered animations
+├── types.ts                       # TS Interfaces for consistency
+├── App.tsx                        # Main Layout & View Router
+├── index.html                     # Entry point, Tailwind config, Fonts
+└── index.tsx                      # React Root
 ```
 
 ---
@@ -76,12 +79,13 @@ Each case study includes:
 - **The Challenge:** Context of the problem.
 - **The Solution:** How it was solved.
 - **Architecture Stack:** Beyond just "React", listing specific tools like Genkit, TMDB API, Firestore, etc.
-- **Technical Deep Dive:** A specific section highlighting algorithmic or architectural decisions (e.g., "Deterministic Repair Layer" or "NoSQL Data Modeling").
+- **Technical Deep Dive:** A specific section highlighting algorithmic or architectural decisions (e.g., "Deterministic Repair Layer" or "Hybrid Config Strategy").
+- **Custom Visualizations:** React components like `NeuroSymbolicDiagram` and `ArchitectureDiagram` that visually explain the system logic.
 
 ### 2. Smooth Navigation
 The `Navbar` and `Hero` components share a unified navigation handler. 
 - Click "Projects" -> Smooth scrolls to the section.
-- Click a Project Card -> Swaps the view to the details page instantly.
+- Click a Project Card -> Swaps the view to the details page instantly using Framer Motion.
 - Click "Back" -> Returns to the home view and preserves context.
 
 ### 3. Neuro-Symbolic Resume
