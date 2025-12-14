@@ -12,12 +12,21 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-dark-gradient overflow-hidden pt-24 pb-12 md:pt-20 md:pb-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-20 md:pb-0">
       
-      {/* Background Ambience */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold-500/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-white/5 rounded-full blur-[100px]"></div>
+      {/* "Now" Status Widget */}
+      <div className="absolute top-24 md:top-32 right-6 md:right-10 z-20">
+         <FadeIn delay={1200} direction="left">
+           <div className="flex items-center gap-3 bg-neutral-900/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-2xl">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <span className="text-xs font-medium text-neutral-300">
+                Building: <span className="text-white">Distributed Chat App</span>
+              </span>
+           </div>
+         </FadeIn>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 text-center z-10 flex flex-col justify-center h-full">

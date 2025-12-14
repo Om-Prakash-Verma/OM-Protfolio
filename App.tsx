@@ -13,6 +13,8 @@ import { Flix } from './components/projects/Flix';
 import { CampusPulse } from './components/projects/CampusPulse';
 import { AetherSchedule } from './components/projects/AetherSchedule';
 import { SEO } from './components/SEO';
+import { NetworkBackground } from './components/ui/NetworkBackground';
+import { AnimatePresence, motion } from 'framer-motion';
 
 // Define the valid view types as a union string type
 type ViewState = 'home' | 'resume' | 'project-1' | 'project-2' | 'project-3' | 'project-4'; 
@@ -95,10 +97,21 @@ function App() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-gold-metallic selection:text-black">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-gold-metallic selection:text-black overflow-x-hidden">
+      <NetworkBackground />
       <Navbar currentView={view} onNavigate={(v, t) => handleNavigate(v, t)} />
-      <main>
-        {renderMainContent()}
+      <main className="relative z-10">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={view}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {renderMainContent()}
+          </motion.div>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>

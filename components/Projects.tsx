@@ -8,7 +8,7 @@ const projects: Project[] = [
     id: "1",
     title: "CrockeryHub",
     description: "A specialized digital storefront and admin system for premium crockery, featuring dynamic content management.",
-    features: ["Admin CMS with Analytics", "WhatsApp Checkout Flow", "Dynamic Site Configuration"],
+    features: ["Hybrid Config (Env/Firestore)", "WhatsApp Checkout Bridge", "Dynamic Form Builder"],
     techStack: ["Next.js", "Firebase", "ShadCN UI", "Genkit"],
     demoUrl: "https://www.shreeenterprises.info/"
   },
@@ -32,7 +32,7 @@ const projects: Project[] = [
     id: "4",
     title: "AetherSchedule",
     description: "Enterprise-grade academic operations platform solving NP-Hard scheduling problems using Neuro-Symbolic AI.",
-    features: ["Neuro-Symbolic Engine", "3D Conflict Detection Matrix", "Operational Analytics Digital Twin"],
+    features: ["Neuro-Symbolic Engine", "Deterministic Repair Layer", "Digital Twin Analytics"],
     techStack: ["Gemini 3.0 Pro", "React", "Firebase", "Algorithms"],
     demoUrl: "https://aether-schedule.vercel.app/"
   }
