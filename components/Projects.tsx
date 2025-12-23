@@ -42,7 +42,7 @@ const projects: Project[] = [
     description: "Advanced developer utility for high-stakes root-cause analysis and semantic version control exploration.",
     features: ["Architectural Pivot Analysis", "Regression Risk Profiling", "D3.js Impact Mapping"],
     techStack: ["React 19", "Gemini 3 Pro", "D3.js", "TypeScript"],
-    githubUrl: "https://github.com/Om-Prakash-Verma/GIT-FORENSICS"
+    demoUrl: "https://git-forensics.vercel.app/"
   }
 ];
 
