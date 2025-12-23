@@ -12,19 +12,19 @@ import { CrockeryHub } from './components/projects/CrockeryHub';
 import { Flix } from './components/projects/Flix';
 import { CampusPulse } from './components/projects/CampusPulse';
 import { AetherSchedule } from './components/projects/AetherSchedule';
+import { GitForensics } from './components/projects/GitForensics';
 import { SEO } from './components/SEO';
 import { NetworkBackground } from './components/ui/NetworkBackground';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Define the valid view types as a union string type
-type ViewState = 'home' | 'resume' | 'project-1' | 'project-2' | 'project-3' | 'project-4'; 
+type ViewState = 'home' | 'resume' | 'project-1' | 'project-2' | 'project-3' | 'project-4' | 'project-5'; 
 
 function App() {
   const [view, setView] = useState<ViewState>('home');
 
   // Unified navigation handler
   const handleNavigate = (newView: string, targetId?: string) => {
-    // We cast string to specific view types logic if needed, or simple equality checks
     if (newView === 'resume') {
        setView('resume');
        window.scrollTo({ top: 0, behavior: "smooth" });
@@ -59,6 +59,8 @@ function App() {
       setView('project-3');
     } else if (id === '4') {
       setView('project-4');
+    } else if (id === '5') {
+      setView('project-5');
     } else {
       console.log('Project detail not implemented for ID:', id);
     }
@@ -76,6 +78,8 @@ function App() {
         return <CampusPulse onBack={() => handleNavigate('home', 'projects')} />;
       case 'project-4':
         return <AetherSchedule onBack={() => handleNavigate('home', 'projects')} />;
+      case 'project-5':
+        return <GitForensics onBack={() => handleNavigate('home', 'projects')} />;
       case 'home':
       default:
         return (

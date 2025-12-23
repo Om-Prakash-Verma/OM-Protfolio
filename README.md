@@ -18,11 +18,6 @@ The portfolio is crafted to position the engineer not just as a coder, but as an
   - **Metallic Gold (`#D4AF37` / `#F59E0B`)**: Used strictly for highlights, calls-to-action, and semantic emphasis. It signifies value and premium quality.
   - **Neutral Greys**: Used for secondary text to maintain high contrast and accessibility.
 
-### Physics & Motion
-Animations are designed to feel "heavy" and "expensive".
-- **Custom Easing:** Instead of standard ease-in-out, we utilize a custom cubic-bezier curve (`0.22, 1, 0.36, 1`). This creates a snappy start with a very long, smooth deceleration ("settling") phase.
-- **Timing:** Elements take **1.8 seconds** to settle, giving the user time to absorb the content as it flows in.
-
 ---
 
 ## 🛠 Tech Stack
@@ -30,10 +25,10 @@ Animations are designed to feel "heavy" and "expensive".
 Built with a focus on clean architecture and performance, even within a client-side environment.
 
 - **Core Framework:** React 19 (TypeScript)
-- **Styling:** Tailwind CSS (configured for distinct typography and custom color palettes)
-- **Routing:** State-based routing (`App.tsx`) for seamless, single-page application (SPA) transitions without full reloads.
-- **Icons:** Inline SVG icons optimized for currentColor inheritance.
-- **Build System:** ES Modules via `esm.sh` (No-bundle setup for rapid prototyping/sandbox environments) or standard Vite (for production).
+- **Styling:** Tailwind CSS
+- **Routing:** State-based routing (`App.tsx`)
+- **AI Intelligence:** Gemini 3 Pro (via @google/genai)
+- **Visuals:** D3.js, Framer Motion
 
 ---
 
@@ -43,30 +38,21 @@ Built with a focus on clean architecture and performance, even within a client-s
 /
 ├── components/
 │   ├── ui/
-│   │   ├── FadeIn.tsx             # Core animation wrapper using IntersectionObserver
-│   │   ├── NetworkBackground.tsx  # Interactive particle background
-│   │   ├── ArchitectureDiagram.tsx # Visualization for CrockeryHub architecture
-│   │   └── NeuroSymbolicDiagram.tsx # Visualization for AetherSchedule AI flow
-│   ├── projects/                  # Detailed case study views
+│   │   ├── FadeIn.tsx             
+│   │   ├── NetworkBackground.tsx  
+│   │   ├── ArchitectureDiagram.tsx 
+│   │   ├── NeuroSymbolicDiagram.tsx 
+│   │   └── ForensicGraph.tsx       # NEW: Forensic mapping visualization
+│   ├── projects/                  
 │   │   ├── CrockeryHub.tsx
 │   │   ├── Flix.tsx
 │   │   ├── CampusPulse.tsx
-│   │   └── AetherSchedule.tsx
-│   ├── Navbar.tsx                 # Responsive navigation with glassmorphism
-│   ├── Hero.tsx                   # Cinematic landing area
-│   ├── About.tsx                  # Personal introduction
-│   ├── Skills.tsx                 # "Approach" section (System Design > Syntax)
-│   ├── Projects.tsx               # Grid view of project cards
-│   ├── Philosophy.tsx             # Core values section
-│   ├── Resume.tsx                 # Printable/Web-viewable CV
-│   ├── Contact.tsx                # CTA and Social Links
-│   └── Footer.tsx
-├── hooks/
-│   └── useOnScreen.ts             # Hook for scroll-triggered animations
-├── types.ts                       # TS Interfaces for consistency
-├── App.tsx                        # Main Layout & View Router
-├── index.html                     # Entry point, Tailwind config, Fonts
-└── index.tsx                      # React Root
+│   │   ├── AetherSchedule.tsx
+│   │   └── GitForensics.tsx       # NEW: High-stakes debugger audit suite
+│   ├── Navbar.tsx                 
+│   ├── Hero.tsx                   
+│   └── ...
+├── ...
 ```
 
 ---
@@ -74,51 +60,16 @@ Built with a focus on clean architecture and performance, even within a client-s
 ## 🌟 Key Features
 
 ### 1. Detailed Case Studies
-Unlike standard portfolios that show just a screenshot and a link, this project features deep-dive views for every project (`components/projects/`). 
-Each case study includes:
-- **The Challenge:** Context of the problem.
-- **The Solution:** How it was solved.
-- **Architecture Stack:** Beyond just "React", listing specific tools like Genkit, TMDB API, Firestore, etc.
-- **Technical Deep Dive:** A specific section highlighting algorithmic or architectural decisions (e.g., "Deterministic Repair Layer" or "Hybrid Config Strategy").
-- **Custom Visualizations:** React components like `NeuroSymbolicDiagram` and `ArchitectureDiagram` that visually explain the system logic.
+Deep-dive views for every project featuring:
+- **System Architecture:** Visualized via custom React components.
+- **Technical Deep Dive:** Algorithmic and logic-first explanations.
+- **Git Forensics (Project 5):** A suite for root-cause analysis using Gemini 3 Pro and D3.js.
 
-### 2. Smooth Navigation
-The `Navbar` and `Hero` components share a unified navigation handler. 
-- Click "Projects" -> Smooth scrolls to the section.
-- Click a Project Card -> Swaps the view to the details page instantly using Framer Motion.
-- Click "Back" -> Returns to the home view and preserves context.
-
-### 3. Neuro-Symbolic Resume
-The `Resume` component is built directly into the app. It presents professional experience in a format readable by both humans and ATS systems (if exported), emphasizing the "AI as a Multiplier" narrative.
-
----
-
-## 🚀 Setup & Customization
-
-### Prerequisites
-- Node.js (if migrating to a local Vite environment)
-- A modern web browser
-
-### Running Locally
-1. Clone the repository.
-2. If using a build tool like Vite:
-   ```bash
-   npm install
-   npm run dev
-   ```
-3. If running in a raw ES Module environment (like the current structure), simply serve the root directory using a static server:
-   ```bash
-   npx serve .
-   ```
-
-### Customizing Content
-- **Personal Details:** Update `components/Hero.tsx` and `components/Resume.tsx`.
-- **Projects:** Modify the `projects` array in `components/Projects.tsx` and creating corresponding detail views in `components/projects/`.
-- **Social Links:** Update `components/Contact.tsx`.
+### 2. Neuro-Symbolic Resume
+Integrated professional profile highlighting the "AI as a Multiplier" narrative.
 
 ---
 
 ## 📜 License
 
 Designed and Built by Om Prakash Verma.
-Free to use for personal portfolio inspiration, but please attribute the design concept.

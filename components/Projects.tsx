@@ -35,6 +35,14 @@ const projects: Project[] = [
     features: ["Neuro-Symbolic Engine", "Deterministic Repair Layer", "Digital Twin Analytics"],
     techStack: ["Gemini 3.0 Pro", "React", "Firebase", "Algorithms"],
     demoUrl: "https://aether-schedule.vercel.app/"
+  },
+  {
+    id: "5",
+    title: "Git Forensics",
+    description: "Advanced developer utility for high-stakes root-cause analysis and semantic version control exploration.",
+    features: ["Architectural Pivot Analysis", "Regression Risk Profiling", "D3.js Impact Mapping"],
+    techStack: ["React 19", "Gemini 3 Pro", "D3.js", "TypeScript"],
+    githubUrl: "https://github.com/Om-Prakash-Verma/GIT-FORENSICS"
   }
 ];
 
