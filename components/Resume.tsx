@@ -70,11 +70,11 @@ export const Resume: React.FC = () => {
                 Technical Exposure
               </h4>
                <ul className="space-y-3 text-neutral-400">
-                <li><strong className="text-neutral-200">Web Architecture:</strong> Frontend & backend concepts, routing, state flow</li>
-                <li><strong className="text-neutral-200">Frameworks & UI:</strong> Next.js (App Router), React concepts, Tailwind CSS, ShadCN UI</li>
-                <li><strong className="text-neutral-200">Backend & Data:</strong> Firebase Authentication, Firestore (via AI‑generated code)</li>
-                <li><strong className="text-neutral-200">Integrations:</strong> REST APIs, third‑party services</li>
-                <li><strong className="text-neutral-200">Development Style:</strong> AI‑assisted coding with manual system design and validation</li>
+                <li><strong className="text-neutral-200">Web Architecture:</strong> Next.js (App Router), React 19, Tailwind CSS, ShadCN UI</li>
+                <li><strong className="text-neutral-200">AI Reasoning:</strong> Gemini 3 Pro Integration, Prompt Engineering, Genkit</li>
+                <li><strong className="text-neutral-200">Data & Backend:</strong> Firebase Firestore, Auth, LocalStorage state-machines</li>
+                <li><strong className="text-neutral-200">Visualization:</strong> D3.js (Force-directed graphs), Recharts, Framer Motion</li>
+                <li><strong className="text-neutral-200">Development Style:</strong> AI-augmented coding with rigorous manual system validation</li>
               </ul>
             </FadeIn>
           </div>
@@ -88,43 +88,50 @@ export const Resume: React.FC = () => {
             <div className="space-y-8 border-l border-white/10 ml-1 pl-8 relative">
               {[
                 {
+                   title: "Git Forensics — AI‑Powered Debugger Suite",
+                   subtitle: "High‑stakes root‑cause analysis and blast‑radius mapping tool",
+                   points: [
+                     "Developed an AI-powered forensic debugger using Gemini 3 Pro for architectural pivot analysis.",
+                     "Visualized semantic blast-radius and hidden couplings using interactive D3.js force-directed graphs.",
+                     "Integrated regression risk scoring (0-100%) and failure path simulation for version control audits.",
+                     "Designed a custom Git Bisect HUD to isolate regressions in complex project histories."
+                   ]
+                },
+                {
                    title: "CrockeryHub — AI‑Built E‑commerce Platform",
                    subtitle: "Business‑ready storefront with a powerful admin system",
                    points: [
                      "Designed and built a full‑stack e‑commerce platform using AI‑assisted workflows.",
                      "Implemented admin dashboard for managing products, categories, brands, and site settings.",
                      "Integrated Firebase Authentication and Firestore for secure access and data handling.",
-                     "Added WhatsApp‑based purchase and inquiry flow for real‑world usability.",
-                     "Personally handled system design, feature planning, and architectural decisions."
+                     "Added WhatsApp‑based purchase and inquiry flow for real‑world usability."
+                   ]
+                },
+                {
+                   title: "AetherSchedule — Intelligent Timetabling System",
+                   subtitle: "NP‑Hard scheduling solver using Neuro‑Symbolic AI",
+                   points: [
+                     "Conceptualized and implemented an AI‑powered academic scheduling system using Gemini 3.0 Pro.",
+                     "Engineered a deterministic 'Busy Matrix' repair layer to enforce O(1) conflict-free guarantees.",
+                     "Visualized operational congestion through real-time heatmaps and Digital Twin analytics."
                    ]
                 },
                 {
                    title: "Flix — Movie & TV Discovery Platform",
                    subtitle: "Large‑scale media discovery and exploration system",
                    points: [
-                     "Built a feature‑rich media platform using the TMDB API.",
-                     "Implemented advanced search, filtering, trailers, cast/crew browsing, and recommendations.",
-                     "Designed AI‑powered fallback logic for broken video sources.",
-                     "Structured the application using a modular Next.js App Router architecture."
+                     "Built a feature‑rich media platform using the TMDB API and Next.js App Router.",
+                     "Implemented AI‑powered fallback logic to handle broken video sources dynamically.",
+                     "Designed advanced search and multi-criteria filtering for optimized content discovery."
                    ]
                 },
                 {
                    title: "Campus Pulse — College Event & Club Hub",
                    subtitle: "Centralized digital ecosystem for campus activities",
                    points: [
-                     "Developed a platform for discovering and managing college events and clubs.",
-                     "Implemented calendar and list‑based event views with ratings and reviews.",
-                     "Built admin dashboards for clubs to manage events, teams, and budgets.",
-                     "Used client‑side persistence to simulate backend behavior and data consistency."
-                   ]
-                },
-                {
-                   title: "AetherSchedule — Intelligent Timetabling System",
-                   subtitle: "System‑driven academic scheduling platform",
-                   points: [
-                     "Conceptualized and implemented an AI‑powered academic scheduling and simulation system.",
-                     "Designed constraint‑based planning and optimization workflows.",
-                     "Defined architecture and logic before AI code generation to ensure correctness."
+                     "Developed a platform for discovering and managing college events and club budgets.",
+                     "Built admin dashboards with financial intelligence charts using Recharts.",
+                     "Implemented a client-side ORM to handle relational data integrity without a traditional backend."
                    ]
                 }
               ].map((project, idx) => (
@@ -147,9 +154,9 @@ export const Resume: React.FC = () => {
             <FadeIn delay={500}>
               <h4 className="text-lg font-display font-bold text-white mb-4">Currently Improving</h4>
               <ul className="space-y-2 text-sm text-neutral-400 list-disc list-inside marker:text-gold-metallic/50">
-                <li>Deeper understanding of AI‑generated codebases</li>
-                <li>Software architecture & system‑design fundamentals</li>
-                <li>Writing cleaner, more maintainable prompts for scalable code output</li>
+                <li>Advanced Large Language Model (LLM) reasoning for system architecture</li>
+                <li>Deeper integration of D3.js for complex system observability</li>
+                <li>Scalable prompt engineering for zero-shot architectural generation</li>
               </ul>
             </FadeIn>
             
@@ -166,7 +173,7 @@ export const Resume: React.FC = () => {
                 </li>
                 <li className="flex gap-2">
                    <span className="text-gold-metallic">›</span>
-                   <span>Actively preparing for <strong>internship roles in Web / AI‑assisted development environments</strong>.</span>
+                   <span>Actively preparing for <strong>internship roles in High-Performance Web / AI Development</strong>.</span>
                 </li>
               </ul>
             </FadeIn>
